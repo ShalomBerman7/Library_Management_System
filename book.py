@@ -5,12 +5,20 @@ class Book:
     def __init__(self, title, author, is_available):   #=(True/False)
         self.title = title
         self.author = author
-        self.id = Book.c_id
+        self.__id = Book.c_id
         Book.c_id += 1
         self.__is_available = is_available
 
     def __str__(self):
         return f'The Book title: {self.title}, author: {self.author},'
+
+    @property
+    def book_id(self):
+        return self.__id
+    
+    book_id.setter
+    def book_id(self, val):
+        self.__id = val
 
     @property
     def is_available(self):
