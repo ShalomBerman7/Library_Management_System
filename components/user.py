@@ -2,12 +2,12 @@ from components.book import Book
 
 class User:
     id = 1
-    def __init__(self,name, borrowed_books=None):
+    def __init__(self,name):
         self.__id = User.id
         User.id += 1
         self.__name = name
-        self.__borrowed_books = borrowed_books
-    
+        self.__borrowed_books = {}
+            
     @property
     def user_id(self):
         return self.__id

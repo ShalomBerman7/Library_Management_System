@@ -27,4 +27,3 @@ class Book:
 if __name__ == "__main__":
     book = Book('baby', 'mather', True)
     print(book.book_id)
-    print(book.__str__())
