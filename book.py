@@ -19,3 +19,6 @@ class Book:
     is_available.setter
     def is_available(self, val):
         self.__is_available = val
+
+book = Book('baby', 'mather', True)
+print(book.__str__())
