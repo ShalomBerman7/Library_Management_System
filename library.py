@@ -1,7 +1,6 @@
 from user import User
 from book import Book
 
-
 class Library:
     
     def __init__(self, books=None, users=None):
@@ -16,9 +15,7 @@ class Library:
 
     def borrow_book(self, user_id, book_id):
         if Book.is_available:    
-            Book.is_available = False
-        
-        
+            Book.is_available = False 
 
     def return_book(self, user_id, book_id):
         Book.is_available = True
