@@ -30,4 +30,3 @@ class Library:
 
     def search_book(self, title):
         pass
-    
