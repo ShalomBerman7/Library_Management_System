@@ -1,4 +1,3 @@
-from class_book import Book
 
 
 class User:
@@ -21,7 +20,7 @@ class User:
     def name(self, new_name):
         self.__name = new_name   
     
-    def add_borrowed_book(self, book: Book):
+    def add_borrowed_book(self, book):
         self.__borrowed_books.append(book)
     
     def borrowed_book(self):
