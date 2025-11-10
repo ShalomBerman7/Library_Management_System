@@ -12,13 +12,19 @@ class Library:
         
     def add_user(self, user:User):
         self.users[user.user_id] = user
-    
+        
     def borrow_book(self, user_id, book_id):
-        if Book.is_available:    
-            Book.is_available = False 
+        if self.books[book_id].is_available:
+            self.books[book_id].is_available = False
+            self.users[user_id].add_borrowed_book(book_id)
+            return 'הספר הושאל בהצלחה'
+        else:
+            return 'הספר לא זמין להשאלה'
 
     def return_book(self, user_id, book_id):
-        Book.is_available = True
+        self.books[book_id].is_available = True
+        self.users[user_id].pop(book_id)
+
 
     def available_books(self) -> list:
         books_available = []
