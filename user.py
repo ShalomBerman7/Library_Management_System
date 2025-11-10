@@ -6,7 +6,8 @@ class User:
         self.__id = User.id
         User.id += 1
         self.__name = name
-        self.__borrowed_books = []
+        self.__borrowed_books = {}
+        
     
     @property
     def user_id(self):
