@@ -15,10 +15,6 @@ class Book:
     @property
     def book_id(self):
         return self.__id
-    
-    book_id.setter
-    def book_id(self, val):
-        self.__id = val
 
     @property
     def is_available(self):
@@ -28,5 +24,7 @@ class Book:
     def is_available(self, val):
         self.__is_available = val
 
-book = Book('baby', 'mather', True)
-print(book.__str__())
+if __name__ == "__main__":
+    book = Book('baby', 'mather', True)
+    print(book.book_id)
+    print(book.__str__())
