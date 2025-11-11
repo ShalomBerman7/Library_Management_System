@@ -1,12 +1,10 @@
 
 
 class Book:
-    c_id = 1
-    def __init__(self, title, author, is_available):   #=(True/False)
+    def __init__(self, id, title, author, is_available):  
         self.title = title
         self.author = author
-        self.__id = Book.c_id
-        Book.c_id += 1
+        self.__id = id
         self.__is_available = is_available
 
     def __str__(self):
@@ -24,6 +22,14 @@ class Book:
     def is_available(self, val):
         self.__is_available = val
 
+    def to_dict(self):  
+        return {
+            "id": self.book_id,
+            "title": self.title,
+            "author": self.author,
+            "is_available": self.is_available
+        }
+        
 if __name__ == "__main__":
     book = Book('baby', 'mather', True)
     print(book.book_id)

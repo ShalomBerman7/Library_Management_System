@@ -1,10 +1,8 @@
 from components.book import Book
 
 class User:
-    id = 1
-    def __init__(self,name, borrowed_books):
-        self.__id = User.id
-        User.id += 1
+    def __init__(self, id, name, borrowed_books):
+        self.__id = id
         self.__name = name
         self.__borrowed_books = borrowed_books
             
@@ -27,8 +25,14 @@ class User:
         return self.__borrowed_books
     
     def __str__(self):
-        return f"id: {self.user_id}, name: {self.name}, list books: {self.borrowed_book()} "
+        return f"name: {self.name}, list books: {self.borrowed_book()} "
 
+    def to_dict(self):
+        return {
+            "id": self.user_id,
+            "name": self.name,
+            "borrowed_books": self.borrowed_book()
+        }
 if __name__ == "__main__":
     
     u = User("aa", ['ff', 'dd'])
