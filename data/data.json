@@ -1,32 +1,49 @@
 {
-    "users":
-     {
-        "1":{
-            "id": 1,
-            "name": "Alice",
-            "borrowed_books": [101, 102]
-        }
-    },
-    "books":
-     {
-        "101":{
-            "id": 101,
-            "title": "1984",
-            "author": "George Orwell",
-            "is_available": false
+    "users": [
+        {
+            "1": {
+                "id": 1,
+                "name": "Alice",
+                "borrowed_books": [
+                    100,
+                    101
+                ]
+            }
         },
-        "102":{
-            "id": 102,
-            "title": "To Kill a Mockingbird",
-            "author": "Harper Lee",
-            "is_available": false
-        },
-        "111":{
-            "id": 111,
-            "title": "The Great Gatsby",
-            "author": "F. Scott Fitzgerald",
-            "is_available": true
+        {
+            "2": {
+                "id": 2,
+                "name": "Bob",
+                "borrowed_books": [
+                    102
+                ]
+            }
         }
-    }
-
+    ],
+    "books": [
+        {
+            "100": {
+                "id": 100,
+                "title": "The Great Gatsby",
+                "author": "F. Scott Fitzgerald",
+                "is_available": false
+            }
+        },
+        {
+            "101": {
+                "id": 101,
+                "title": "1984",
+                "author": "George Orwell",
+                "is_available": true
+            }
+        },
+        {
+            "102": {
+                "id": 102,
+                "title": "To Kill a Mockingbird",
+                "author": "Harper Lee",
+                "is_available": false
+            }
+        }
+    ]
 }
