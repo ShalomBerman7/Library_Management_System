@@ -23,6 +23,8 @@ def main():
     def print_users():
         for k , v in lib.users.items():
             print(k, v.__str__())
+            
+    print_books()
     print_users()
     
 if __name__ =="__main__":

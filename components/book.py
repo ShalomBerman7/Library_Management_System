@@ -20,7 +20,7 @@ class Book:
     def is_available(self):
         return self.__is_available
 
-    is_available.setter
+    @is_available.setter
     def is_available(self, val):
         self.__is_available = val
 
